@@ -6,7 +6,7 @@ Version:	1.10
 Release:	3
 License:	distributable
 Group:		Fonts
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{tarname}/1.10/%{tarname}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/ttf-bitstream-vera/1.10/%{tarname}-%{version}.tar.bz2
 # Source0-md5:	bb22bd5b4675f5dbe17c6963d8c00ed6
 #Source1:	%{name}.Fontmap
 URL:		http://www.gnome.org/fonts/
