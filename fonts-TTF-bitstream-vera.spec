@@ -3,7 +3,7 @@ Summary:	Bitstream Vera True Type fonts
 Summary(pl):	Fonty True Type Bitstream Vera
 Name:		fonts-ttf-bitstream-vera
 Version:	1.10
-Release:	2
+Release:	3
 License:	distributable
 Group:		Fonts
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{tarname}/1.10/%{tarname}-%{version}.tar.bz2
@@ -12,6 +12,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{tarname}/1.10/%{tarname}-%{ver
 URL:		http://www.gnome.org/fonts/
 Requires(post,postun):	fontpostinst
 Requires:	%{_fontsdir}/TTF
+Obsoletes:	fonts-ttf-bitstream-vera
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
