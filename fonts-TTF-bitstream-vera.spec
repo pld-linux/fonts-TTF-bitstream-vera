@@ -1,20 +1,27 @@
 %define tarname ttf-bitstream-vera
-Summary:	-
+Summary:	Bitstream Vera truetype fonts
+Summary(pl):	Fonty truetype Bitstream Vera
 Name:		fonts-ttf-bitstream-vera
 Version:	1.10
-Release:	0.2
+Release:	1
 License:	distributable
 Group:		X11/Fonts
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{tarname}/1.10/%{tarname}-%{version}.tar.bz2
 # Source0-md5:	bb22bd5b4675f5dbe17c6963d8c00ed6
 #Source1:	%{name}.Fontmap
-PreReq:		fontpostinst
+URL:		http://www.gnome.org/fonts/
+Requires(post,postun):	fontpostinst
+Requires:       %{_fontsdir}/TTF
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_ttffontsdir	%{_fontsdir}/TTF
 
 %description
+This package contains Bitstream Vera truetype fonts (TTF).
+
+%description -l pl
+Pakiet ten zawiera fonty truetype (TTF) Bitstream Vera.
 
 %prep
 %setup -q -n %{tarname}-%{version}
@@ -28,10 +35,10 @@ install *.ttf $RPM_BUILD_ROOT%{_ttffontsdir}
 rm -rf $RPM_BUILD_ROOT
 
 %post
-/usr/bin/fontpostinst TTF
+fontpostinst TTF
 
 %postun 
-/usr/bin/fontpostinst TTF
+fontpostinst TTF
 
 %files
 %defattr(644,root,root,755)
