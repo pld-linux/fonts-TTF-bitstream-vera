@@ -37,7 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 %post
 fontpostinst TTF
 
-%postun 
+%postun
 fontpostinst TTF
 
 %files
