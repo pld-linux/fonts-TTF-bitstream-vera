@@ -1,6 +1,6 @@
 %define tarname ttf-bitstream-vera
-Summary:	Bitstream Vera truetype fonts
-Summary(pl):	Fonty truetype Bitstream Vera
+Summary:	Bitstream Vera True Type fonts
+Summary(pl):	Fonty True Type Bitstream Vera
 Name:		fonts-ttf-bitstream-vera
 Version:	1.10
 Release:	1
@@ -18,10 +18,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_ttffontsdir	%{_fontsdir}/TTF
 
 %description
-This package contains Bitstream Vera truetype fonts (TTF).
+This package contains Bitstream Vera True Type fonts (TTF).
 
 %description -l pl
-Pakiet ten zawiera fonty truetype (TTF) Bitstream Vera.
+Pakiet ten zawiera fonty True Type (TTF) Bitstream Vera.
 
 %prep
 %setup -q -n %{tarname}-%{version}
