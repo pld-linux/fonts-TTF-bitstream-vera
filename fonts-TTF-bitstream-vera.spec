@@ -1,4 +1,4 @@
-%define tarname ttf-bitstream-vera
+%define	tarname	ttf-bitstream-vera
 Summary:	Bitstream Vera True Type fonts
 Summary(pl):	Fonty True Type Bitstream Vera
 Name:		fonts-ttf-bitstream-vera
@@ -11,7 +11,7 @@ Source0:	http://ftp.gnome.org/pub/GNOME/sources/%{tarname}/1.10/%{tarname}-%{ver
 #Source1:	%{name}.Fontmap
 URL:		http://www.gnome.org/fonts/
 Requires(post,postun):	fontpostinst
-Requires:       %{_fontsdir}/TTF
+Requires:	%{_fontsdir}/TTF
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
