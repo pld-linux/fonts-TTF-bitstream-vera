@@ -1,6 +1,6 @@
 %define	tarname	ttf-bitstream-vera
 Summary:	Bitstream Vera True Type fonts
-Summary(pl.UTF-8):   Fonty True Type Bitstream Vera
+Summary(pl.UTF-8):	Fonty True Type Bitstream Vera
 Name:		fonts-TTF-bitstream-vera
 Version:	1.10
 Release:	3
