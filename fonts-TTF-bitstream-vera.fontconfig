@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+
+	<!-- Nimbus fonts -->
+	<match target="pattern">
+		<!--test qual="any" name="family"><string>Georgia</string></test>
+		<test qual="any" name="family"><string>Palatino</string></test-->
+		<test qual="any" name="family"><string>Verdana</string></test>
+		<edit name="family" mode="assign"><string>Bitstream Vera Sans</string></edit>
+
+	</match>
+
+
+</fontconfig>
+
