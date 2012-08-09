@@ -3,7 +3,7 @@ Summary:	Bitstream Vera TrueType fonts
 Summary(pl.UTF-8):	Fonty TrueType Bitstream Vera
 Name:		fonts-TTF-bitstream-vera
 Version:	1.10
-Release:	5
+Release:	6
 License:	distributable
 Group:		Fonts
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/ttf-bitstream-vera/1.10/%{tarname}-%{version}.tar.bz2
@@ -12,6 +12,7 @@ Source1:	%{name}.fontconfig
 URL:		http://www.gnome.org/fonts/
 Requires(post,postun):	fontpostinst
 Requires:	%{_fontsdir}/TTF
+Requires:	fontconfig >= 1:2.10.1
 Obsoletes:	fonts-ttf-bitstream-vera
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,12 +31,12 @@ Pakiet ten zawiera fonty TrueType (TTF) Bitstream Vera.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_ttffontsdir}
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.avail
+install -d $RPM_BUILD_ROOT%{_datadir}/fontconfig/conf.avail
 install -d $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.d
 
 install *.ttf $RPM_BUILD_ROOT%{_ttffontsdir}
-install %SOURCE1 $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.avail/60-verdana.conf
-ln -s ../conf.avail/60-verdana.conf $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.d
+install %SOURCE1 $RPM_BUILD_ROOT%{_datadir}/fontconfig/conf.avail/60-verdana.conf
+ln -s %{_datadir}/fontconfig/conf.avail/60-verdana.conf $RPM_BUILD_ROOT%{_sysconfdir}/fonts/conf.d
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -51,5 +52,5 @@ fontpostinst TTF
 # README.TXT is almost empty
 %doc COPYRIGHT.TXT RELEASENOTES.TXT
 %{_ttffontsdir}/*
-%{_sysconfdir}/fonts/conf.avail/60-verdana.conf
+%{_datadir}/fontconfig/conf.avail/60-verdana.conf
 %{_sysconfdir}/fonts/conf.d/60-verdana.conf
